@@ -61,6 +61,10 @@ def text_tokeniser(text):
 workspace_directory = ""
 app = Flask(__name__)
 
+@app.route('/', methods=['GET']) 
+def index():
+    return "It works"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
