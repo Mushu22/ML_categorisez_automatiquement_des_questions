@@ -61,7 +61,7 @@ def text_tokeniser(text):
 workspace_directory = ""
 app = Flask(__name__)
 
-@app.route('/', methods=['GET']) 
+@app.route('/') 
 def index():
     return "It works"
 
@@ -84,6 +84,6 @@ def predict():
     return jsonify({'result': result})
 
 if __name__ == '__main__':
-    workspace_directory = sys.argv[1]
+    # workspace_directory = sys.argv[1]
     app.run(port=4125)
 
