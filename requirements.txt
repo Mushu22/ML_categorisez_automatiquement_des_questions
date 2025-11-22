@@ -2,4 +2,4 @@ flask
 joblib
 nltk
 contractions
-sklearn
+scikit-learn
