@@ -12,7 +12,6 @@ import __main__
 try:
     nltk.data.find('tokenizers/punkt')
     nltk.data.find('taggers/averaged_perceptron_tagger')
-    nltk.data.find('corpora/wordnet')
     nltk.download('punkt_tab')
     
 except LookupError:
