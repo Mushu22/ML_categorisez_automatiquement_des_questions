@@ -9,6 +9,19 @@ from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
 import __main__
 
+
+try:
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('taggers/averaged_perceptron_tagger')
+    nltk.data.find('corpora/wordnet')
+    
+except LookupError:
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
+    nltk.download('wordnet')
+    nltk.download('omw-1.4')
+
+
 workspace_directory = ""
 app = Flask(__name__)
 
@@ -88,6 +101,7 @@ def predict():
     return jsonify({'result': result})
 
 if __name__ == '__main__':
+    
     # workspace_directory = sys.argv[1]
     app.run(port=4125)
 
