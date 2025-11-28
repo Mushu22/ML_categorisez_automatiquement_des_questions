@@ -8,6 +8,11 @@ from nltk.tokenize import word_tokenize
 from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
 
+
+workspace_directory = ""
+app = Flask(__name__)
+
+
 def text_tokeniser(text):
     
     def merge_csharp_bigram(tokens):
@@ -58,8 +63,6 @@ def text_tokeniser(text):
     return final_tokens
 
 
-workspace_directory = ""
-app = Flask(__name__)
 
 @app.route('/') 
 def index():
