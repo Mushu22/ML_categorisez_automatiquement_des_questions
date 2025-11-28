@@ -7,7 +7,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
-
+import __main__
 
 workspace_directory = ""
 app = Flask(__name__)
@@ -63,6 +63,7 @@ def text_tokeniser(text):
     return final_tokens
 
 
+setattr(__main__, "text_tokeniser", text_tokeniser)
 
 @app.route('/') 
 def index():
