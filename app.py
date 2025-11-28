@@ -9,11 +9,11 @@ from nltk import pos_tag
 from nltk.stem import WordNetLemmatizer
 import __main__
 
-
 try:
     nltk.data.find('tokenizers/punkt')
     nltk.data.find('taggers/averaged_perceptron_tagger')
     nltk.data.find('corpora/wordnet')
+    nltk.download('punkt_tab')
     
 except LookupError:
     nltk.download('punkt')
